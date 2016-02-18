@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46199A751C760A7100EC7493 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46199A741C760A7100EC7493 /* AppDelegate.swift */; };
+		46199A771C760A7100EC7493 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46199A761C760A7100EC7493 /* ViewController.swift */; };
+		46199A791C760A7100EC7493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46199A781C760A7100EC7493 /* Assets.xcassets */; };
+		46199A7C1C760A7100EC7493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46199A7A1C760A7100EC7493 /* Main.storyboard */; };
+		87C71F23A0EA7576F2EF235F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F932D54BE7BF278DDC9AD89 /* Pods.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F932D54BE7BF278DDC9AD89 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46199A711C760A7100EC7493 /* NuimoWebSocketServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuimoWebSocketServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46199A741C760A7100EC7493 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		46199A761C760A7100EC7493 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		46199A781C760A7100EC7493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46199A7B1C760A7100EC7493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		46199A7D1C760A7100EC7493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B340F0BB8C7AF1800F2B9CE3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C1634BE12E5DC21925493461 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46199A6E1C760A7100EC7493 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87C71F23A0EA7576F2EF235F /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46199A681C760A7100EC7493 = {
+			isa = PBXGroup;
+			children = (
+				46199A731C760A7100EC7493 /* NuimoWebSocketServer */,
+				46199A721C760A7100EC7493 /* Products */,
+				7CD1AA43747D9ED85AB889F4 /* Pods */,
+				EB42D7E89EB4A670C839076B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		46199A721C760A7100EC7493 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46199A711C760A7100EC7493 /* NuimoWebSocketServer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46199A731C760A7100EC7493 /* NuimoWebSocketServer */ = {
+			isa = PBXGroup;
+			children = (
+				46199A741C760A7100EC7493 /* AppDelegate.swift */,
+				46199A761C760A7100EC7493 /* ViewController.swift */,
+				46199A781C760A7100EC7493 /* Assets.xcassets */,
+				46199A7A1C760A7100EC7493 /* Main.storyboard */,
+				46199A7D1C760A7100EC7493 /* Info.plist */,
+			);
+			path = NuimoWebSocketServer;
+			sourceTree = "<group>";
+		};
+		7CD1AA43747D9ED85AB889F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1634BE12E5DC21925493461 /* Pods.debug.xcconfig */,
+				B340F0BB8C7AF1800F2B9CE3 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB42D7E89EB4A670C839076B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F932D54BE7BF278DDC9AD89 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46199A701C760A7100EC7493 /* NuimoWebSocketServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46199A801C760A7100EC7493 /* Build configuration list for PBXNativeTarget "NuimoWebSocketServer" */;
+			buildPhases = (
+				E87DD7AD558C1A570EA90E57 /* Check Pods Manifest.lock */,
+				46199A6D1C760A7100EC7493 /* Sources */,
+				46199A6E1C760A7100EC7493 /* Frameworks */,
+				46199A6F1C760A7100EC7493 /* Resources */,
+				7E78534E3325A5388E4DA12E /* Embed Pods Frameworks */,
+				445D97303BD31DBBB01B6A8F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NuimoWebSocketServer;
+			productName = NuimoWebSocketServer;
+			productReference = 46199A711C760A7100EC7493 /* NuimoWebSocketServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46199A691C760A7100EC7493 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = senic;
+				TargetAttributes = {
+					46199A701C760A7100EC7493 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 46199A6C1C760A7100EC7493 /* Build configuration list for PBXProject "NuimoWebSocketServer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46199A681C760A7100EC7493;
+			productRefGroup = 46199A721C760A7100EC7493 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46199A701C760A7100EC7493 /* NuimoWebSocketServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46199A6F1C760A7100EC7493 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46199A791C760A7100EC7493 /* Assets.xcassets in Resources */,
+				46199A7C1C760A7100EC7493 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		445D97303BD31DBBB01B6A8F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E78534E3325A5388E4DA12E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E87DD7AD558C1A570EA90E57 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46199A6D1C760A7100EC7493 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46199A771C760A7100EC7493 /* ViewController.swift in Sources */,
+				46199A751C760A7100EC7493 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		46199A7A1C760A7100EC7493 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46199A7B1C760A7100EC7493 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46199A7E1C760A7100EC7493 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		46199A7F1C760A7100EC7493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		46199A811C760A7100EC7493 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1634BE12E5DC21925493461 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NuimoWebSocketServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.senic.nuimo-websocket-server";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		46199A821C760A7100EC7493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B340F0BB8C7AF1800F2B9CE3 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NuimoWebSocketServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.senic.nuimo-websocket-server";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46199A6C1C760A7100EC7493 /* Build configuration list for PBXProject "NuimoWebSocketServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46199A7E1C760A7100EC7493 /* Debug */,
+				46199A7F1C760A7100EC7493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46199A801C760A7100EC7493 /* Build configuration list for PBXNativeTarget "NuimoWebSocketServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46199A811C760A7100EC7493 /* Debug */,
+				46199A821C760A7100EC7493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46199A691C760A7100EC7493 /* Project object */;
+}

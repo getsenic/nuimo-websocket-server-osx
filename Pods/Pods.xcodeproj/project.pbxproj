@@ -1,0 +1,782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0075E5A15539455EAEC3FAD33C49B454 /* PSWebSocketUTF8Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5889DA3845A666E075531DDB2091E79D /* PSWebSocketUTF8Decoder.m */; };
+		040B165EF9945B9D09F08057C7035308 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DDFE7DF71DA9440A9AC56FBC15C23E /* Security.framework */; };
+		088E4C43B6F944AD03AA71EB1886C63B /* PocketSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3264768792E9A541D1B52AF8A7CDB74 /* PocketSocket-dummy.m */; };
+		104486FAE28EF9EFD828E58AC7DAE870 /* PSWebSocketUTF8Decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C3A4AFBB13FE5B3712E953284B9CB3 /* PSWebSocketUTF8Decoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		193663BD1FDE4EF0083E11D792E516AD /* PSWebSocketInflater.m in Sources */ = {isa = PBXBuildFile; fileRef = E8BC81434DEC27EE3A899A33CD8CA02C /* PSWebSocketInflater.m */; };
+		22D80FF0984B014046244FEA9D981B49 /* PSWebSocketBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2834AA17711B3F0919B54BE945ADB1DC /* PSWebSocketBuffer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		294185D636CB3943D2C216437369F431 /* PSWebSocketDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9C63399D597387402C4C75F4008A02 /* PSWebSocketDriver.m */; };
+		2C5A1775FB6BF2DC97D47E5B574456D1 /* PocketSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 581CE565620F5FC95886F626C3E74CEA /* PocketSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		321494309683F40ECDDA0631AD7C1F04 /* NuimoLEDMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DA1FB3816000240C5E21CD0798E15E /* NuimoLEDMatrix.swift */; };
+		3603283A7420D9760884DFD7D5931E10 /* BLEDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42F0FD547093A26A65D550BBA2875FF /* BLEDevice.swift */; };
+		3717E16D142EEEA5630F461230CA8F0E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE6D1BAD748A5D36F573C9EF93EEF9F /* Cocoa.framework */; };
+		3C29580B98FBA36A21C82AA10F5DBE94 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
+		49EE0B9F185D56866D0CB37E1B9B09FA /* PSWebSocketDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 944674BA9EFA6D42447B7242AF69C6CD /* PSWebSocketDriver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		534762EF3EA97477990209FE92B93C75 /* NuimoBluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F058B566F86E537ABEA3CD0F130502F9 /* NuimoBluetoothController.swift */; };
+		5EA6DE44C3B5F34FB4101B48115EC86A /* NuimoGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C91BC36715DACE6170347328E2107A /* NuimoGesture.swift */; };
+		7DEE608EC8802130D677D1D2636191B4 /* PSWebSocketDeflater.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA9B0C55F285BA2A5DEB9F1C29554FF /* PSWebSocketDeflater.m */; };
+		80908F9375A9CB98E2E46924D978288B /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A2491F0AE14B1791F226DC2A05F3B92 /* NuimoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88A34A08CF0F6AD3B2E4C13AB26586E /* NuimoController.swift */; };
+		950B416BD403D6B4670BDD2E56CECFD9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE6D1BAD748A5D36F573C9EF93EEF9F /* Cocoa.framework */; };
+		96AD96B7B906AEB4C854F746E1568127 /* NuimoGestureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851B545C1A2224D91FEB071D457856CC /* NuimoGestureEvent.swift */; };
+		999AE26A6A89B80315561FE57EA8D881 /* PSWebSocketTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 19C284A2441B3E7A1D66760F54BC1921 /* PSWebSocketTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CDE96A603D5941B46BDFACC5AC72C8A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C95175E160AE4F7CE4E3AE0EC4E89CE /* CFNetwork.framework */; };
+		A1A5DD93D96529D3037F651F8176851E /* PSWebSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D26F8DC16032EB51987AA26DB646BD1A /* PSWebSocketServer.m */; };
+		A302C6EE6150D4237271339ED5A9B7A6 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0B327903C0C0BE6C88C28C51E64B18 /* CoreBluetooth.framework */; };
+		A497E9FEBC166DCD7594DA9E7A27EAD6 /* NuimoSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCF5ED3BC7EC4FFC95D0190546F93701 /* NuimoSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A73CAF38AFB9B7877B9D27D4C7FC37D1 /* PSWebSocketNetworkThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DDCE974DD86773A70F82A52BF12267E /* PSWebSocketNetworkThread.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A89794BCCBB8C4CAFFF4B172E6A09590 /* BLEDiscoveryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267892C5525EECA5504A84D60C71932C /* BLEDiscoveryManager.swift */; };
+		AB0CAE22E8C7CF6600A3E91995F4BC5E /* PSWebSocketInflater.h in Headers */ = {isa = PBXBuildFile; fileRef = C1F0BA41B0EC23390E0955F533549AF5 /* PSWebSocketInflater.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B3E397FB3BE1B475A7AAC3D4EDE437E6 /* PSWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A2B5FC0FE7A4ED99287B0AEF018076 /* PSWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C99CDF072B1B5CB647F73DE0E4B0579E /* PSWebSocketDeflater.h in Headers */ = {isa = PBXBuildFile; fileRef = 0845D9B8597E3105F8603D69974DBE4C /* PSWebSocketDeflater.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D9535EEA84962083C63BA8C5F5101D89 /* PSWebSocketNetworkThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B6BC5E33E4D9299C2E0DCCA605E14D /* PSWebSocketNetworkThread.m */; };
+		DCEF3FF1901BA57BA0410473EA2D53EE /* NuimoDiscoveryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E52EA0E977884E8B679249B47D3383 /* NuimoDiscoveryManager.swift */; };
+		DDAEEBA2A316F0173205C1DAC3C6CAED /* PSWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE18D708D3F8E4D9B0A1DF1477D792A /* PSWebSocket.m */; };
+		E0E00BD9BC4B8B9BB62D9FDAB2F86B8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBD429D3D0734BCB5474146A2036636 /* Foundation.framework */; };
+		E4D74BD0F4316098CC7222882F09752A /* PSWebSocketInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 69E185FD7D73CDFC05F4B68114C0EC70 /* PSWebSocketInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E9B330799B4414D977CD90D4C165E40C /* NuimoSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D842F1C55A736AFFBD1D6A91A2FFA07B /* NuimoSwift-dummy.m */; };
+		EFE4C29EE0916483A6224F44C2AB2D67 /* PSWebSocketServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BCE58DD368C2C149ACC40F4ADCF2CF8 /* PSWebSocketServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F14778294AC55210214DA57CC57CBDA6 /* PSWebSocketBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F194F10BC745E298C61D4CD6DCC364 /* PSWebSocketBuffer.m */; };
+		F3FA2CACA0265BED6BAFF2A606A18EF6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE6D1BAD748A5D36F573C9EF93EEF9F /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D0F063B75161D7B4A4EA28E43691042 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D0E0AA2020CFEA5765C45BCFCDB8D6B;
+			remoteInfo = PocketSocket;
+		};
+		4A1CC330B7C2C3B1963D8F7323EB84DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D15CCD9D6A1F4CD48642DF4EA755D02;
+			remoteInfo = NuimoSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0734AFD42DAADEE403F9F1F564F2AE42 /* PocketSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PocketSocket.modulemap; sourceTree = "<group>"; };
+		0845D9B8597E3105F8603D69974DBE4C /* PSWebSocketDeflater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocketDeflater.h; path = PocketSocket/PSWebSocketDeflater.h; sourceTree = "<group>"; };
+		0FBD429D3D0734BCB5474146A2036636 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		19C284A2441B3E7A1D66760F54BC1921 /* PSWebSocketTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocketTypes.h; path = PocketSocket/PSWebSocketTypes.h; sourceTree = "<group>"; };
+		267892C5525EECA5504A84D60C71932C /* BLEDiscoveryManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLEDiscoveryManager.swift; path = SDK/BLEDiscoveryManager.swift; sourceTree = "<group>"; };
+		2834AA17711B3F0919B54BE945ADB1DC /* PSWebSocketBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocketBuffer.h; path = PocketSocket/PSWebSocketBuffer.h; sourceTree = "<group>"; };
+		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		31F194F10BC745E298C61D4CD6DCC364 /* PSWebSocketBuffer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSWebSocketBuffer.m; path = PocketSocket/PSWebSocketBuffer.m; sourceTree = "<group>"; };
+		4C95175E160AE4F7CE4E3AE0EC4E89CE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		54DDFE7DF71DA9440A9AC56FBC15C23E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		581CE565620F5FC95886F626C3E74CEA /* PocketSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PocketSocket-umbrella.h"; sourceTree = "<group>"; };
+		5889DA3845A666E075531DDB2091E79D /* PSWebSocketUTF8Decoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSWebSocketUTF8Decoder.m; path = PocketSocket/PSWebSocketUTF8Decoder.m; sourceTree = "<group>"; };
+		59DA1FB3816000240C5E21CD0798E15E /* NuimoLEDMatrix.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NuimoLEDMatrix.swift; path = SDK/NuimoLEDMatrix.swift; sourceTree = "<group>"; };
+		5BCE58DD368C2C149ACC40F4ADCF2CF8 /* PSWebSocketServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocketServer.h; path = PocketSocket/PSWebSocketServer.h; sourceTree = "<group>"; };
+		5DDCE974DD86773A70F82A52BF12267E /* PSWebSocketNetworkThread.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocketNetworkThread.h; path = PocketSocket/PSWebSocketNetworkThread.h; sourceTree = "<group>"; };
+		5FA9B0C55F285BA2A5DEB9F1C29554FF /* PSWebSocketDeflater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSWebSocketDeflater.m; path = PocketSocket/PSWebSocketDeflater.m; sourceTree = "<group>"; };
+		69E185FD7D73CDFC05F4B68114C0EC70 /* PSWebSocketInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocketInternal.h; path = PocketSocket/PSWebSocketInternal.h; sourceTree = "<group>"; };
+		7907CE4C4D42E13D789BF3E1641912D6 /* NuimoSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NuimoSwift.xcconfig; sourceTree = "<group>"; };
+		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		7D73176B15D14A8FCDB14E018374C99D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CF6536BA3D8574D2BBDB03A755B686 /* PocketSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PocketSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		851B545C1A2224D91FEB071D457856CC /* NuimoGestureEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NuimoGestureEvent.swift; path = SDK/NuimoGestureEvent.swift; sourceTree = "<group>"; };
+		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		93B6BC5E33E4D9299C2E0DCCA605E14D /* PSWebSocketNetworkThread.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSWebSocketNetworkThread.m; path = PocketSocket/PSWebSocketNetworkThread.m; sourceTree = "<group>"; };
+		944674BA9EFA6D42447B7242AF69C6CD /* PSWebSocketDriver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocketDriver.h; path = PocketSocket/PSWebSocketDriver.h; sourceTree = "<group>"; };
+		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		9C9C63399D597387402C4C75F4008A02 /* PSWebSocketDriver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSWebSocketDriver.m; path = PocketSocket/PSWebSocketDriver.m; sourceTree = "<group>"; };
+		A3264768792E9A541D1B52AF8A7CDB74 /* PocketSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PocketSocket-dummy.m"; sourceTree = "<group>"; };
+		A45523B10F0FF1B68CB519BEA7843FBC /* NuimoSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NuimoSwift.modulemap; sourceTree = "<group>"; };
+		B42F0FD547093A26A65D550BBA2875FF /* BLEDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLEDevice.swift; path = SDK/BLEDevice.swift; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BCE18D708D3F8E4D9B0A1DF1477D792A /* PSWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSWebSocket.m; path = PocketSocket/PSWebSocket.m; sourceTree = "<group>"; };
+		BCF5ED3BC7EC4FFC95D0190546F93701 /* NuimoSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NuimoSwift-umbrella.h"; sourceTree = "<group>"; };
+		C1F0BA41B0EC23390E0955F533549AF5 /* PSWebSocketInflater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocketInflater.h; path = PocketSocket/PSWebSocketInflater.h; sourceTree = "<group>"; };
+		C2C91BC36715DACE6170347328E2107A /* NuimoGesture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NuimoGesture.swift; path = SDK/NuimoGesture.swift; sourceTree = "<group>"; };
+		C596C287BD150113992FD369AF806B30 /* PocketSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PocketSocket-prefix.pch"; sourceTree = "<group>"; };
+		C5C3A4AFBB13FE5B3712E953284B9CB3 /* PSWebSocketUTF8Decoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocketUTF8Decoder.h; path = PocketSocket/PSWebSocketUTF8Decoder.h; sourceTree = "<group>"; };
+		CB0B327903C0C0BE6C88C28C51E64B18 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
+		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D26F8DC16032EB51987AA26DB646BD1A /* PSWebSocketServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSWebSocketServer.m; path = PocketSocket/PSWebSocketServer.m; sourceTree = "<group>"; };
+		D842F1C55A736AFFBD1D6A91A2FFA07B /* NuimoSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NuimoSwift-dummy.m"; sourceTree = "<group>"; };
+		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E88A34A08CF0F6AD3B2E4C13AB26586E /* NuimoController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NuimoController.swift; path = SDK/NuimoController.swift; sourceTree = "<group>"; };
+		E8BC81434DEC27EE3A899A33CD8CA02C /* PSWebSocketInflater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSWebSocketInflater.m; path = PocketSocket/PSWebSocketInflater.m; sourceTree = "<group>"; };
+		E9977F4EE927D8ACDBD1E18B4C02609E /* NuimoSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NuimoSwift-prefix.pch"; sourceTree = "<group>"; };
+		EC7070997AF3A96C00022D3E033FBB04 /* NuimoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NuimoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE6D1BAD748A5D36F573C9EF93EEF9F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		F058B566F86E537ABEA3CD0F130502F9 /* NuimoBluetoothController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NuimoBluetoothController.swift; path = SDK/NuimoBluetoothController.swift; sourceTree = "<group>"; };
+		F0E52EA0E977884E8B679249B47D3383 /* NuimoDiscoveryManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NuimoDiscoveryManager.swift; path = SDK/NuimoDiscoveryManager.swift; sourceTree = "<group>"; };
+		F208C3AFDCAE61B4740084886E2018D4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5A2B5FC0FE7A4ED99287B0AEF018076 /* PSWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocket.h; path = PocketSocket/PSWebSocket.h; sourceTree = "<group>"; };
+		F8D28DCC73BC9416F03C541E7E11ECE0 /* PocketSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PocketSocket.xcconfig; sourceTree = "<group>"; };
+		FBEEF9E96278FB893E13DB475326EB40 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1018CD2DFB38088900FA4C543C79E9F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CDE96A603D5941B46BDFACC5AC72C8A /* CFNetwork.framework in Frameworks */,
+				950B416BD403D6B4670BDD2E56CECFD9 /* Cocoa.framework in Frameworks */,
+				E0E00BD9BC4B8B9BB62D9FDAB2F86B8D /* Foundation.framework in Frameworks */,
+				040B165EF9945B9D09F08057C7035308 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4C7CE4191B534A065259F34AF0EC6D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FA2CACA0265BED6BAFF2A606A18EF6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E41C940AC932BE16AA52648727F113DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3717E16D142EEEA5630F461230CA8F0E /* Cocoa.framework in Frameworks */,
+				A302C6EE6150D4237271339ED5A9B7A6 /* CoreBluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EF4D169FC456BD5955B7FBE3B735BCC /* NuimoSwift */ = {
+			isa = PBXGroup;
+			children = (
+				7C8DDD693EFC725CB3429E513BC2E40F /* Core */,
+				4CC8CEA16D60759E9A0DF946F3F04DFE /* Support Files */,
+			);
+			path = NuimoSwift;
+			sourceTree = "<group>";
+		};
+		178A06EC2705B46FE1BB38A02AAC7BBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33CB73F518F41E2B4AF9B00C3E9015CA /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33CB73F518F41E2B4AF9B00C3E9015CA /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				4C95175E160AE4F7CE4E3AE0EC4E89CE /* CFNetwork.framework */,
+				EEE6D1BAD748A5D36F573C9EF93EEF9F /* Cocoa.framework */,
+				CB0B327903C0C0BE6C88C28C51E64B18 /* CoreBluetooth.framework */,
+				0FBD429D3D0734BCB5474146A2036636 /* Foundation.framework */,
+				54DDFE7DF71DA9440A9AC56FBC15C23E /* Security.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		3A28DE8718A99492616930A96014E1DF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBEEF9E96278FB893E13DB475326EB40 /* Info.plist */,
+				0734AFD42DAADEE403F9F1F564F2AE42 /* PocketSocket.modulemap */,
+				F8D28DCC73BC9416F03C541E7E11ECE0 /* PocketSocket.xcconfig */,
+				A3264768792E9A541D1B52AF8A7CDB74 /* PocketSocket-dummy.m */,
+				C596C287BD150113992FD369AF806B30 /* PocketSocket-prefix.pch */,
+				581CE565620F5FC95886F626C3E74CEA /* PocketSocket-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PocketSocket";
+			sourceTree = "<group>";
+		};
+		40E2CC7FF35DF7121AEC0BB93AE0F56A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EF4D169FC456BD5955B7FBE3B735BCC /* NuimoSwift */,
+				4F19A14A4D6E13691CAB21906CAD51C2 /* PocketSocket */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4CC8CEA16D60759E9A0DF946F3F04DFE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F208C3AFDCAE61B4740084886E2018D4 /* Info.plist */,
+				A45523B10F0FF1B68CB519BEA7843FBC /* NuimoSwift.modulemap */,
+				7907CE4C4D42E13D789BF3E1641912D6 /* NuimoSwift.xcconfig */,
+				D842F1C55A736AFFBD1D6A91A2FFA07B /* NuimoSwift-dummy.m */,
+				E9977F4EE927D8ACDBD1E18B4C02609E /* NuimoSwift-prefix.pch */,
+				BCF5ED3BC7EC4FFC95D0190546F93701 /* NuimoSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NuimoSwift";
+			sourceTree = "<group>";
+		};
+		4F19A14A4D6E13691CAB21906CAD51C2 /* PocketSocket */ = {
+			isa = PBXGroup;
+			children = (
+				F5A2B5FC0FE7A4ED99287B0AEF018076 /* PSWebSocket.h */,
+				BCE18D708D3F8E4D9B0A1DF1477D792A /* PSWebSocket.m */,
+				2834AA17711B3F0919B54BE945ADB1DC /* PSWebSocketBuffer.h */,
+				31F194F10BC745E298C61D4CD6DCC364 /* PSWebSocketBuffer.m */,
+				0845D9B8597E3105F8603D69974DBE4C /* PSWebSocketDeflater.h */,
+				5FA9B0C55F285BA2A5DEB9F1C29554FF /* PSWebSocketDeflater.m */,
+				944674BA9EFA6D42447B7242AF69C6CD /* PSWebSocketDriver.h */,
+				9C9C63399D597387402C4C75F4008A02 /* PSWebSocketDriver.m */,
+				C1F0BA41B0EC23390E0955F533549AF5 /* PSWebSocketInflater.h */,
+				E8BC81434DEC27EE3A899A33CD8CA02C /* PSWebSocketInflater.m */,
+				69E185FD7D73CDFC05F4B68114C0EC70 /* PSWebSocketInternal.h */,
+				5DDCE974DD86773A70F82A52BF12267E /* PSWebSocketNetworkThread.h */,
+				93B6BC5E33E4D9299C2E0DCCA605E14D /* PSWebSocketNetworkThread.m */,
+				5BCE58DD368C2C149ACC40F4ADCF2CF8 /* PSWebSocketServer.h */,
+				D26F8DC16032EB51987AA26DB646BD1A /* PSWebSocketServer.m */,
+				19C284A2441B3E7A1D66760F54BC1921 /* PSWebSocketTypes.h */,
+				C5C3A4AFBB13FE5B3712E953284B9CB3 /* PSWebSocketUTF8Decoder.h */,
+				5889DA3845A666E075531DDB2091E79D /* PSWebSocketUTF8Decoder.m */,
+				3A28DE8718A99492616930A96014E1DF /* Support Files */,
+			);
+			path = PocketSocket;
+			sourceTree = "<group>";
+		};
+		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */,
+				79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */,
+				D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */,
+				87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */,
+				894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */,
+				E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */,
+				CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */,
+				2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */,
+				977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */,
+				DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		7C8DDD693EFC725CB3429E513BC2E40F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B42F0FD547093A26A65D550BBA2875FF /* BLEDevice.swift */,
+				267892C5525EECA5504A84D60C71932C /* BLEDiscoveryManager.swift */,
+				F058B566F86E537ABEA3CD0F130502F9 /* NuimoBluetoothController.swift */,
+				E88A34A08CF0F6AD3B2E4C13AB26586E /* NuimoController.swift */,
+				F0E52EA0E977884E8B679249B47D3383 /* NuimoDiscoveryManager.swift */,
+				C2C91BC36715DACE6170347328E2107A /* NuimoGesture.swift */,
+				851B545C1A2224D91FEB071D457856CC /* NuimoGestureEvent.swift */,
+				59DA1FB3816000240C5E21CD0798E15E /* NuimoLEDMatrix.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				178A06EC2705B46FE1BB38A02AAC7BBC /* Frameworks */,
+				40E2CC7FF35DF7121AEC0BB93AE0F56A /* Pods */,
+				A2A83E212A4184CAA08AA9A4CC8C698A /* Products */,
+				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A2A83E212A4184CAA08AA9A4CC8C698A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC7070997AF3A96C00022D3E033FBB04 /* NuimoSwift.framework */,
+				83CF6536BA3D8574D2BBDB03A755B686 /* PocketSocket.framework */,
+				7D73176B15D14A8FCDB14E018374C99D /* Pods.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D235BD9DD6B6603E988CD27C1DFB4160 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80908F9375A9CB98E2E46924D978288B /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53AC0D9B9B7915CB8DC8AF5CFFB7BA4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C5A1775FB6BF2DC97D47E5B574456D1 /* PocketSocket-umbrella.h in Headers */,
+				B3E397FB3BE1B475A7AAC3D4EDE437E6 /* PSWebSocket.h in Headers */,
+				22D80FF0984B014046244FEA9D981B49 /* PSWebSocketBuffer.h in Headers */,
+				C99CDF072B1B5CB647F73DE0E4B0579E /* PSWebSocketDeflater.h in Headers */,
+				49EE0B9F185D56866D0CB37E1B9B09FA /* PSWebSocketDriver.h in Headers */,
+				AB0CAE22E8C7CF6600A3E91995F4BC5E /* PSWebSocketInflater.h in Headers */,
+				E4D74BD0F4316098CC7222882F09752A /* PSWebSocketInternal.h in Headers */,
+				A73CAF38AFB9B7877B9D27D4C7FC37D1 /* PSWebSocketNetworkThread.h in Headers */,
+				EFE4C29EE0916483A6224F44C2AB2D67 /* PSWebSocketServer.h in Headers */,
+				999AE26A6A89B80315561FE57EA8D881 /* PSWebSocketTypes.h in Headers */,
+				104486FAE28EF9EFD828E58AC7DAE870 /* PSWebSocketUTF8Decoder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F18E6E3D9B963DA6C2DAC312E33FFC1B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A497E9FEBC166DCD7594DA9E7A27EAD6 /* NuimoSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D0E0AA2020CFEA5765C45BCFCDB8D6B /* PocketSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F82F5DD1AE520A3AA14E774421325A3F /* Build configuration list for PBXNativeTarget "PocketSocket" */;
+			buildPhases = (
+				AA2DECF8BFFAF151A5FDD7C530B58C94 /* Sources */,
+				1018CD2DFB38088900FA4C543C79E9F9 /* Frameworks */,
+				D53AC0D9B9B7915CB8DC8AF5CFFB7BA4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocketSocket;
+			productName = PocketSocket;
+			productReference = 83CF6536BA3D8574D2BBDB03A755B686 /* PocketSocket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4D15CCD9D6A1F4CD48642DF4EA755D02 /* NuimoSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 444C5FA326A0011C4D3AFE01C4884963 /* Build configuration list for PBXNativeTarget "NuimoSwift" */;
+			buildPhases = (
+				AE390374F448A6866CDB9993A9A3A840 /* Sources */,
+				E41C940AC932BE16AA52648727F113DE /* Frameworks */,
+				F18E6E3D9B963DA6C2DAC312E33FFC1B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NuimoSwift;
+			productName = NuimoSwift;
+			productReference = EC7070997AF3A96C00022D3E033FBB04 /* NuimoSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		96623DCA31B7C5A3871C597BAE6C88A5 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAD9DCCF3DDE010AF49B07919DDA6DB3 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				53014301A537F48B57136ACC819097F4 /* Sources */,
+				A4C7CE4191B534A065259F34AF0EC6D9 /* Frameworks */,
+				D235BD9DD6B6603E988CD27C1DFB4160 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C2C0D59A0F9DCF65F94A72CBF471A9A /* PBXTargetDependency */,
+				C90EB03398255CB01B190632C54E4858 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 7D73176B15D14A8FCDB14E018374C99D /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = A2A83E212A4184CAA08AA9A4CC8C698A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D15CCD9D6A1F4CD48642DF4EA755D02 /* NuimoSwift */,
+				1D0E0AA2020CFEA5765C45BCFCDB8D6B /* PocketSocket */,
+				96623DCA31B7C5A3871C597BAE6C88A5 /* Pods */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53014301A537F48B57136ACC819097F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C29580B98FBA36A21C82AA10F5DBE94 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA2DECF8BFFAF151A5FDD7C530B58C94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				088E4C43B6F944AD03AA71EB1886C63B /* PocketSocket-dummy.m in Sources */,
+				DDAEEBA2A316F0173205C1DAC3C6CAED /* PSWebSocket.m in Sources */,
+				F14778294AC55210214DA57CC57CBDA6 /* PSWebSocketBuffer.m in Sources */,
+				7DEE608EC8802130D677D1D2636191B4 /* PSWebSocketDeflater.m in Sources */,
+				294185D636CB3943D2C216437369F431 /* PSWebSocketDriver.m in Sources */,
+				193663BD1FDE4EF0083E11D792E516AD /* PSWebSocketInflater.m in Sources */,
+				D9535EEA84962083C63BA8C5F5101D89 /* PSWebSocketNetworkThread.m in Sources */,
+				A1A5DD93D96529D3037F651F8176851E /* PSWebSocketServer.m in Sources */,
+				0075E5A15539455EAEC3FAD33C49B454 /* PSWebSocketUTF8Decoder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE390374F448A6866CDB9993A9A3A840 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3603283A7420D9760884DFD7D5931E10 /* BLEDevice.swift in Sources */,
+				A89794BCCBB8C4CAFFF4B172E6A09590 /* BLEDiscoveryManager.swift in Sources */,
+				534762EF3EA97477990209FE92B93C75 /* NuimoBluetoothController.swift in Sources */,
+				8A2491F0AE14B1791F226DC2A05F3B92 /* NuimoController.swift in Sources */,
+				DCEF3FF1901BA57BA0410473EA2D53EE /* NuimoDiscoveryManager.swift in Sources */,
+				5EA6DE44C3B5F34FB4101B48115EC86A /* NuimoGesture.swift in Sources */,
+				96AD96B7B906AEB4C854F746E1568127 /* NuimoGestureEvent.swift in Sources */,
+				321494309683F40ECDDA0631AD7C1F04 /* NuimoLEDMatrix.swift in Sources */,
+				E9B330799B4414D977CD90D4C165E40C /* NuimoSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C2C0D59A0F9DCF65F94A72CBF471A9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NuimoSwift;
+			target = 4D15CCD9D6A1F4CD48642DF4EA755D02 /* NuimoSwift */;
+			targetProxy = 4A1CC330B7C2C3B1963D8F7323EB84DD /* PBXContainerItemProxy */;
+		};
+		C90EB03398255CB01B190632C54E4858 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PocketSocket;
+			target = 1D0E0AA2020CFEA5765C45BCFCDB8D6B /* PocketSocket */;
+			targetProxy = 1D0F063B75161D7B4A4EA28E43691042 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0DE0857A9AB4857EC7A2AF5F79994C39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		10B2EE21B5D67EE2C819831CCC43832B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		145755763B188B3838E64CC8173922AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		73677F550FFAAE15C50704F9B200787B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7907CE4C4D42E13D789BF3E1641912D6 /* NuimoSwift.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/NuimoSwift/NuimoSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NuimoSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/NuimoSwift/NuimoSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = NuimoSwift;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7C07D96CC7C445E83983A6C6420BC692 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80D203510403085C6AB4917950D6E651 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D28DCC73BC9416F03C541E7E11ECE0 /* PocketSocket.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/PocketSocket/PocketSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PocketSocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/PocketSocket/PocketSocket.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PocketSocket;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		80ED772C4C90AE722F84989F3E0A36AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7907CE4C4D42E13D789BF3E1641912D6 /* NuimoSwift.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/NuimoSwift/NuimoSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NuimoSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/NuimoSwift/NuimoSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = NuimoSwift;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E0C828B5FBC3E5BB728C2ABA6BF2F7FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D28DCC73BC9416F03C541E7E11ECE0 /* PocketSocket.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/PocketSocket/PocketSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PocketSocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/PocketSocket/PocketSocket.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PocketSocket;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B2EE21B5D67EE2C819831CCC43832B /* Debug */,
+				7C07D96CC7C445E83983A6C6420BC692 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		444C5FA326A0011C4D3AFE01C4884963 /* Build configuration list for PBXNativeTarget "NuimoSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73677F550FFAAE15C50704F9B200787B /* Debug */,
+				80ED772C4C90AE722F84989F3E0A36AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAD9DCCF3DDE010AF49B07919DDA6DB3 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DE0857A9AB4857EC7A2AF5F79994C39 /* Debug */,
+				145755763B188B3838E64CC8173922AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F82F5DD1AE520A3AA14E774421325A3F /* Build configuration list for PBXNativeTarget "PocketSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0C828B5FBC3E5BB728C2ABA6BF2F7FF /* Debug */,
+				80D203510403085C6AB4917950D6E651 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

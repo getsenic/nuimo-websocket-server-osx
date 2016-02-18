@@ -1,0 +1,15 @@
+PODS:
+  - NuimoSwift (0.3.2):
+    - NuimoSwift/Core (= 0.3.2)
+  - NuimoSwift/Core (0.3.2)
+  - PocketSocket (0.6.4)
+
+DEPENDENCIES:
+  - NuimoSwift
+  - PocketSocket
+
+SPEC CHECKSUMS:
+  NuimoSwift: ab658ec14b2474f7c041a9d28951a36dcdf51303
+  PocketSocket: eee7ef375f55b98e7ca79e097d9c61fd688e9494
+
+COCOAPODS: 0.39.0
