@@ -651,7 +651,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="NuimoWebSocketServer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Nuimo WebSocket Server" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -733,14 +733,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cu5-Jz-ZQa">
-                                <rect key="frame" x="360" y="273" width="102" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Status: Stopped" id="mM3-Rs-RnV">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-Zs-5cd">
                                 <rect key="frame" x="18" y="310" width="47" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Nuimo:" id="LeV-P7-HnQ">
@@ -771,9 +763,7 @@
                             <constraint firstAttribute="trailing" secondItem="myw-w9-M2z" secondAttribute="trailing" constant="20" id="bWc-G7-Xh0"/>
                             <constraint firstItem="wgb-Zs-5cd" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="dwh-1S-Nkj"/>
                             <constraint firstItem="D8j-3O-ZwF" firstAttribute="leading" secondItem="DV0-ww-vuP" secondAttribute="trailing" constant="8" id="fg1-1S-9SV"/>
-                            <constraint firstItem="Cu5-Jz-ZQa" firstAttribute="baseline" secondItem="wIK-vE-Kc4" secondAttribute="baseline" id="kaf-It-NJW"/>
                             <constraint firstAttribute="bottom" secondItem="myw-w9-M2z" secondAttribute="bottom" constant="20" id="oay-aB-FEL"/>
-                            <constraint firstAttribute="trailing" secondItem="Cu5-Jz-ZQa" secondAttribute="trailing" constant="20" id="vyj-he-0rd"/>
                             <constraint firstItem="myw-w9-M2z" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="xd8-Za-7cs"/>
                         </constraints>
                     </view>
@@ -782,7 +772,6 @@
                         <outlet property="nuimoStatusTextField" destination="uBs-hT-3Pe" id="m19-Js-WhL"/>
                         <outlet property="portTextField" destination="D8j-3O-ZwF" id="ekq-68-cQz"/>
                         <outlet property="startStopButton" destination="wIK-vE-Kc4" id="UW6-Mr-KxC"/>
-                        <outlet property="statusTextField" destination="Cu5-Jz-ZQa" id="2EK-Vt-BBt"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

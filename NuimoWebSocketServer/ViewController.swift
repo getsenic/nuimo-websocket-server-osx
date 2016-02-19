@@ -15,7 +15,6 @@ class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscover
     @IBOutlet weak var nuimoStatusTextField: NSTextField!
     @IBOutlet weak var portTextField: NSTextField!
     @IBOutlet weak var startStopButton: NSButton!
-    @IBOutlet weak var statusTextField: NSTextField!
     @IBOutlet var logTextView: NSTextView!
 
     var discoveringNuimo = false
