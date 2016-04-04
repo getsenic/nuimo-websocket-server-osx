@@ -12,6 +12,7 @@ import NuimoSwift
 
 class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscoveryDelegate, NuimoControllerDelegate {
 
+    @IBOutlet var arrayController: NSArrayController!
     @IBOutlet weak var nuimoStatusTextField: NSTextField!
     @IBOutlet weak var portTextField: NSTextField!
     @IBOutlet weak var startStopButton: NSButton!
@@ -35,18 +36,33 @@ class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscover
     }
 
     @IBAction func startStopServer(sender: AnyObject) {
-        if let server = server {
-            server.stop()
-            self.server = nil
-            startStopButton.title = "Start"
+        nuimoController?.disconnect()
+        nuimoController = nil
+
+        if let _ = server {
+            stopServer()
         }
         else {
-            guard let port = UInt(portTextField.stringValue) else { return }
-            server = PSWebSocketServer(host: nil, port: port)
-            server?.delegate = self
-            server?.start()
-            startStopButton.title = "Stop"
+            guard let nuimoController = arrayController.selectedObjects.first as? NuimoController else { return }
+            nuimoController.delegate = self
+            nuimoController.connect()
+            self.nuimoController = nuimoController
+            nuimoStatusTextField.stringValue = "Connecting..."
         }
+    }
+
+    func startServer() {
+        guard let port = UInt(portTextField.stringValue) else { return }
+        server = PSWebSocketServer(host: nil, port: port)
+        server?.delegate = self
+        server?.start()
+        startStopButton.title = "Stop"
+    }
+
+    func stopServer() {
+        server?.stop()
+        server = nil
+        startStopButton.title = "Start"
     }
 
     func log(message: String) {
@@ -90,16 +106,13 @@ class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscover
     //MARK: NuimoDiscoveryDelegate
 
     func nuimoDiscoveryManager(discovery: NuimoDiscoveryManager, didDiscoverNuimoController controller: NuimoController) {
-        nuimoStatusTextField.stringValue = "Discovered. Connecting..."
-        discovery.stopDiscovery()
-        controller.delegate = self
-        controller.connect()
+        arrayController.addObject(controller)
     }
 
     //MARK: NuimoControllerDelegate
 
     func nuimoControllerDidConnect(controller: NuimoController) {
-        nuimoController = controller
+        startServer()
         nuimoStatusTextField.stringValue = "Connected"
     }
 
