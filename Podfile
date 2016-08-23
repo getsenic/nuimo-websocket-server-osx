@@ -1,4 +1,6 @@
 use_frameworks!
 
-pod 'NuimoSwift'
-pod 'PocketSocket'
+target 'NuimoWebSocketServer' do
+    pod 'NuimoSwift'
+    pod 'PocketSocket'
+end
