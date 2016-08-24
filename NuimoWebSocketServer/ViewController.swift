@@ -170,6 +170,7 @@ extension ViewController: NuimoControllerDelegate {
             case .FlyRight:      return "F,R"
             case .FlyBackwards:  return "F,B"
             case .FlyTowards:    return "F,T"
+            case .FlyUpDown:     return "F,\(event.value ?? 0)"
             default:             return nil
         }}() else { return }
         sockets.forEach{
