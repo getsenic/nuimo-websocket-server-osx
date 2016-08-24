@@ -83,7 +83,7 @@ class ViewController: NSViewController {
 extension ViewController: PSWebSocketServerDelegate {
 
     func serverDidStart(server: PSWebSocketServer!) {
-        log("Server started")
+        log("Server started at ws://localhost:\(portTextField.stringValue)/ and ready to accept your web sockets")
     }
 
     func server(server: PSWebSocketServer!, didFailWithError error: NSError!) {
