@@ -10,7 +10,7 @@ import Cocoa
 import PocketSocket
 import NuimoSwift
 
-class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscoveryDelegate, NuimoControllerDelegate {
+class ViewController: NSViewController {
 
     @IBOutlet var arrayController: NSArrayController!
     @IBOutlet weak var nuimoStatusTextField: NSTextField!
@@ -67,8 +67,9 @@ class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscover
     func log(message: String) {
         logTextView.textStorage?.appendAttributedString(NSAttributedString(string: "\(message)\n"))
     }
+}
 
-    //MARK: PSWebSocketServerDelegate
+extension ViewController: PSWebSocketServerDelegate {
 
     func serverDidStart(server: PSWebSocketServer!) {
         log("Server started")
@@ -106,14 +107,16 @@ class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscover
     func server(server: PSWebSocketServer!, webSocket: PSWebSocket!, didFailWithError error: NSError!) {
         log("WebSocket failed: \(error.localizedDescription), \(error.localizedFailureReason ?? "")")
     }
+}
 
-    //MARK: NuimoDiscoveryDelegate
+extension ViewController: NuimoDiscoveryDelegate {
 
     func nuimoDiscoveryManager(discovery: NuimoDiscoveryManager, didDiscoverNuimoController controller: NuimoController) {
         arrayController.addObject(controller)
     }
+}
 
-    //MARK: NuimoControllerDelegate
+extension ViewController: NuimoControllerDelegate {
 
     func nuimoController(controller: NuimoController, didChangeConnectionState state: NuimoConnectionState, withError error: NSError?) {
         switch state {
