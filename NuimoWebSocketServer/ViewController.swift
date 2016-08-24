@@ -122,19 +122,19 @@ extension ViewController: NuimoControllerDelegate {
         case .Connecting:
             showNuimoStatus("Connecting...")
         case .Connected:
+            showNuimoStatus("Connected")
             startServer()
-            nuimoStatusTextField.stringValue = "Connected"
         case .Disconnecting:
             showNuimoStatus("Disconnecting...")
         case .Disconnected:
-            if let error = error {
-                showNuimoStatus("Connection failed: \(error.localizedDescription) \(error.localizedFailureReason ?? "")")
-            }
-            else {
-                showNuimoStatus("Disconnected")
-            }
+            showNuimoStatus("Discovering...")
+            stopServer()
         case .Invalidated:
-            showNuimoStatus("Disappeared.")
+            showNuimoStatus("Discovering...")
+            stopServer()
+        }
+        if let error = error {
+            log("Nuimo connection failed: \(error.localizedDescription) \(error.localizedFailureReason ?? "")")
         }
     }
 
