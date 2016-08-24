@@ -44,7 +44,14 @@ class ViewController: NSViewController {
             stopServer()
         }
         else {
-            guard let nuimoController = arrayController.selectedObjects.first as? NuimoController else { return }
+            guard let nuimoController = arrayController.selectedObjects.first as? NuimoController else {
+                let alert = NSAlert()
+                alert.messageText = "No Nuimo selected"
+                alert.informativeText = "Please select a Nuimo to connect to"
+                alert.addButtonWithTitle("Ok")
+                alert.runModal()
+                return
+            }
             self.nuimoController = nuimoController
             nuimoController.delegate = self
             nuimoController.connect()
