@@ -43,10 +43,9 @@ class ViewController: NSViewController {
         }
         else {
             guard let nuimoController = arrayController.selectedObjects.first as? NuimoController else { return }
+            self.nuimoController = nuimoController
             nuimoController.delegate = self
             nuimoController.connect()
-            self.nuimoController = nuimoController
-            nuimoStatusTextField.stringValue = "Connecting..."
         }
     }
 
