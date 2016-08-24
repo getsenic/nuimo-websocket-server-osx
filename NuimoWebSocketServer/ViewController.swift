@@ -25,14 +25,13 @@ class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscover
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        discoverNuimo()
-    }
-
-    func discoverNuimo(reason: String = "") {
-        guard !discoveringNuimo else { return }
-        nuimoStatusTextField.stringValue = "\(reason) Discovering..."
         NuimoDiscoveryManager.sharedManager.delegate = self
         NuimoDiscoveryManager.sharedManager.startDiscovery()
+        showNuimoStatus("Discovering...")
+    }
+
+    func showNuimoStatus(status: String) {
+        nuimoStatusTextField.stringValue = status
     }
 
     @IBAction func startStopServer(sender: AnyObject) {
@@ -119,21 +118,21 @@ class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscover
     func nuimoController(controller: NuimoController, didChangeConnectionState state: NuimoConnectionState, withError error: NSError?) {
         switch state {
         case .Connecting:
-            discoverNuimo("Connecting...")
+            showNuimoStatus("Connecting...")
         case .Connected:
             startServer()
             nuimoStatusTextField.stringValue = "Connected"
         case .Disconnecting:
-            discoverNuimo("Disconnecting...")
+            showNuimoStatus("Disconnecting...")
         case .Disconnected:
             if let error = error {
-                discoverNuimo("Connection failed: \(error.localizedDescription) \(error.localizedFailureReason ?? "")")
+                showNuimoStatus("Connection failed: \(error.localizedDescription) \(error.localizedFailureReason ?? "")")
             }
             else {
-                discoverNuimo("Disconnected")
+                showNuimoStatus("Disconnected")
             }
         case .Invalidated:
-            discoverNuimo("Disappeared.")
+            showNuimoStatus("Disappeared.")
         }
     }
 
