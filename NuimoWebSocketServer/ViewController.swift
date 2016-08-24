@@ -22,6 +22,8 @@ class ViewController: NSViewController {
     var nuimoController: NuimoController?
     var server: PSWebSocketServer?
     var sockets = [PSWebSocket]()
+    var firmwareVersion: String?
+    var batteryLevel: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +68,16 @@ class ViewController: NSViewController {
     func log(message: String) {
         logTextView.textStorage?.appendAttributedString(NSAttributedString(string: "\(message)\n"))
     }
+
+    func sendFirmwareVersion(sockets: [PSWebSocket]) {
+        guard let firmwareVersion = firmwareVersion else { return }
+        sockets.forEach{ $0.send("V\(firmwareVersion)") }
+    }
+
+    func sendBatteryLevel(sockets: [PSWebSocket]) {
+        guard let batteryLevel = batteryLevel else { return }
+        sockets.forEach{ $0.send("%\(batteryLevel)") }
+    }
 }
 
 extension ViewController: PSWebSocketServerDelegate {
@@ -91,6 +103,8 @@ extension ViewController: PSWebSocketServerDelegate {
     func server(server: PSWebSocketServer!, webSocketDidOpen webSocket: PSWebSocket!) {
         log("WebSocket opened")
         sockets.append(webSocket)
+        sendFirmwareVersion([webSocket])
+        sendBatteryLevel([webSocket])
     }
 
     func server(server: PSWebSocketServer!, webSocket: PSWebSocket!, didReceiveMessage message: AnyObject!) {
@@ -157,5 +171,15 @@ extension ViewController: NuimoControllerDelegate {
         sockets.forEach{
             $0.send(event)
         }
+    }
+
+    func nuimoController(controller: NuimoController, didReadFirmwareVersion firmwareVersion: String) {
+        self.firmwareVersion = firmwareVersion
+        sendFirmwareVersion(sockets)
+    }
+
+    func nuimoController(controller: NuimoController, didUpdateBatteryLevel batteryLevel: Int) {
+        self.batteryLevel = batteryLevel
+        sendBatteryLevel(sockets)
     }
 }
