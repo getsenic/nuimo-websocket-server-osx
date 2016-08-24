@@ -14,31 +14,31 @@ public let NuimoLEDMatrixDefaultLEDOffCharacter = NuimoLEDMatrixLEDOffCharacters
 public let NuimoLEDMatrixDefaultLEDOnCharacter: Character = "."
 
 public class NuimoLEDMatrix: NSObject {
-    public let bits: [Bit]
-    
+    public let leds: [Bool]
+
     public init(matrix: NuimoLEDMatrix) {
-        bits = matrix.bits
+        leds = matrix.leds
     }
-    
+
     public init(string: String) {
-        bits = string
+        leds = string
             // Cut off after count of LEDs
             .substringToIndex(string.startIndex.advancedBy(min(string.characters.count, NuimoLEDMatrixLEDCount)))
             // Right fill up to count of LEDs
             .stringByPaddingToLength(NuimoLEDMatrixLEDCount, withString: " ", startingAtIndex: 0)
             .characters
-            .map{NuimoLEDMatrixLEDOffCharacters.contains($0) ? Bit.Zero : Bit.One}
+            .map{!NuimoLEDMatrixLEDOffCharacters.contains($0)}
     }
-    
+
     //TODO: Have only one init(progress) method and pass presentation style as 2nd argument
     public convenience init(progressWithVerticalBar progress: Double) {
         let string = (0..<9)
             .reverse()
-            .map{progress > Double($0) / 9.0 ? "   ...   " : "         "}
+            .map{progress > Double($0) / 9.0 ? "    .    " : "         "}
             .reduce("", combine: +)
         self.init(string: string)
     }
-    
+
     public convenience init(progressWithVolumeBar progress: Double) {
         let width = Int(ceil(max(0.0, min(1.0, progress)) * 9))
         let string = (0..<9)
@@ -53,7 +53,7 @@ public class NuimoLEDMatrix: NSObject {
 }
 
 public func ==(left: NuimoLEDMatrix, right: NuimoLEDMatrix) -> Bool {
-    return left.bits == right.bits
+    return left.leds == right.leds
 }
 
 public func ==(left: NuimoLEDMatrix?, right: NuimoLEDMatrix) -> Bool {
@@ -111,7 +111,7 @@ extension NuimoLEDMatrix {
         " ..  ..  " +
         "... ...  " +
         " .   .   ")}
-    
+
     public static var lightBulbMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         "   ...   " +
@@ -122,7 +122,7 @@ extension NuimoLEDMatrix {
         "   ...   " +
         "   ...   " +
         "    .    ")}
-    
+
     public static var powerOnMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         "         " +
@@ -133,7 +133,7 @@ extension NuimoLEDMatrix {
         "   ...   " +
         "         " +
         "         ")}
-    
+
     public static var powerOffMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         "         " +
@@ -144,7 +144,7 @@ extension NuimoLEDMatrix {
         "   ...   " +
         "         " +
         "         ")}
-    
+
     public static var shuffleMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         "         " +
@@ -155,7 +155,7 @@ extension NuimoLEDMatrix {
         " ..   .. " +
         "         " +
         "         ")}
-    
+
     public static var letterBMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         "   ...   " +
@@ -166,7 +166,7 @@ extension NuimoLEDMatrix {
         "   .  .  " +
         "   ...   " +
         "         ")}
-    
+
     public static var letterOMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         "   ...   " +
@@ -177,7 +177,7 @@ extension NuimoLEDMatrix {
         "  .   .  " +
         "   ...   " +
         "         ")}
-    
+
     public static var letterGMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         "   ...   " +
@@ -188,7 +188,7 @@ extension NuimoLEDMatrix {
         "  .   .  " +
         "   ...   " +
         "         ")}
-    
+
     public static var letterWMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         " .     . " +
@@ -199,7 +199,7 @@ extension NuimoLEDMatrix {
         " .  .  . " +
         "  .. ..  " +
         "         ")}
-    
+
     public static var letterYMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         "  .   .  " +
@@ -210,7 +210,7 @@ extension NuimoLEDMatrix {
         "    .    " +
         "    .    " +
         "         ")}
-    
+
     public static var playMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         "   .     " +
@@ -221,7 +221,7 @@ extension NuimoLEDMatrix {
         "   ..    " +
         "   .     " +
         "         ")}
-    
+
     public static var pauseMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         "  .. ..  " +
@@ -232,7 +232,7 @@ extension NuimoLEDMatrix {
         "  .. ..  " +
         "  .. ..  " +
         "         ")}
-    
+
     public static var nextMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         "         " +
@@ -243,7 +243,7 @@ extension NuimoLEDMatrix {
         "   .  .  " +
         "         " +
         "         ")}
-    
+
     public static var previousMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "         " +
         "         " +
@@ -254,7 +254,7 @@ extension NuimoLEDMatrix {
         "  .  .   " +
         "         " +
         "         ")}
-    
+
     public static var questionMarkMatrix: NuimoLEDMatrix {return NuimoLEDMatrix(string:
         "   ...   " +
         "  .   .  " +

@@ -10,20 +10,19 @@
 
 import CoreBluetooth
 
-public let NuimoDiscoveryManagerAutoDetectUnreachableControllersKey = "NuimoDiscoveryManagerAutoDetectUnreachableControllers"
-public let NuimoDiscoveryManagerWebSocketControllerURLsKey = "NuimoDiscoveryManagerWebSocketControllerURLs"
 public let NuimoDiscoveryManagerAdditionalDiscoverServiceUUIDsKey = "NuimoDiscoveryManagerAdditionalDiscoverServiceUUIDs"
 
 // Allows for discovering Nuimo BLE hardware controllers and virtual (websocket) controllers
-public class NuimoDiscoveryManager: NSObject, BLEDiscoveryDelegate {
-    
+public class NuimoDiscoveryManager: NSObject {
+
     public static let sharedManager = NuimoDiscoveryManager()
     public private (set) lazy var centralManager: CBCentralManager = self.bleDiscovery.centralManager
+    public private (set) lazy var bleDiscovery: BLEDiscoveryManager = BLEDiscoveryManager(delegate: self.bleDiscoveryDelegate, options: self.options)
     
     public var delegate: NuimoDiscoveryDelegate?
 
     private let options: [String : AnyObject]
-    private lazy var bleDiscovery: BLEDiscoveryManager = BLEDiscoveryManager(delegate: self, options: self.options)
+    private lazy var bleDiscoveryDelegate: PrivateBLEDiscoveryManagerDelegate = PrivateBLEDiscoveryManagerDelegate(nuimoDiscoveryManager: self)
 
     public init(delegate: NuimoDiscoveryDelegate? = nil, options: [String : AnyObject] = [:]) {
         self.options = options
@@ -31,58 +30,46 @@ public class NuimoDiscoveryManager: NSObject, BLEDiscoveryDelegate {
         self.delegate = delegate
     }
     
-    public func startDiscovery() {
-        // Discover websocket controllers
-        #if NUIMO_USE_WEBSOCKETS
-        (options[NuimoDiscoveryManagerWebSocketControllerURLsKey] as? [String])?.forEach {
-            delegate?.nuimoDiscoveryManager(self, didDiscoverNuimoController: NuimoWebSocketController(url: $0))
-        }
-        #endif
-
-        let detectUnreachableControllers = options[NuimoDiscoveryManagerAutoDetectUnreachableControllersKey] as? Bool ?? false
+    public func startDiscovery(detectUnreachableControllers: Bool = false) {
         let additionalDiscoverServiceUUIDs = options[NuimoDiscoveryManagerAdditionalDiscoverServiceUUIDsKey] as? [CBUUID] ?? []
-        bleDiscovery.startDiscovery(nuimoServiceUUIDs + additionalDiscoverServiceUUIDs, detectUnreachableControllers: detectUnreachableControllers)
+        bleDiscovery.startDiscovery(nuimoServiceUUIDs + additionalDiscoverServiceUUIDs, detectUnreachableDevices: detectUnreachableControllers)
     }
 
     public func stopDiscovery() {
         bleDiscovery.stopDiscovery()
     }
 
-    public func bleDiscoveryManager(discovery: BLEDiscoveryManager, deviceWithPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject]?) -> BLEDevice? {
+    private func nuimoBluetoothControllerWithPeripheral(peripheral: CBPeripheral) -> NuimoBluetoothController {
+        return NuimoBluetoothController(discoveryManager: self.bleDiscovery, uuid: peripheral.identifier.UUIDString, peripheral: peripheral)
+    }
+}
+
+private class PrivateBLEDiscoveryManagerDelegate: BLEDiscoveryManagerDelegate {
+    let nuimoDiscoveryManager: NuimoDiscoveryManager
+
+    init(nuimoDiscoveryManager: NuimoDiscoveryManager) {
+        self.nuimoDiscoveryManager = nuimoDiscoveryManager
+    }
+
+    func bleDiscoveryManager(discovery: BLEDiscoveryManager, deviceWithPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject]?) -> BLEDevice? {
+        if let device = nuimoDiscoveryManager.delegate?.nuimoDiscoveryManager?(nuimoDiscoveryManager, deviceForPeripheral: peripheral) {
+            return device
+        }
         guard peripheral.name == "Nuimo" || advertisementData?[CBAdvertisementDataLocalNameKey] as? String == "Nuimo" else { return nil }
-        return NuimoBluetoothController(centralManager: bleDiscovery.centralManager, uuid: peripheral.identifier.UUIDString, peripheral: peripheral)
+        return nuimoDiscoveryManager.nuimoBluetoothControllerWithPeripheral(peripheral)
     }
 
-    public func bleDiscoveryManager(discovery: BLEDiscoveryManager, didDiscoverDevice device: BLEDevice) {
-        delegate?.nuimoDiscoveryManager(self, didDiscoverNuimoController: device as! NuimoController)
+    func bleDiscoveryManager(discovery: BLEDiscoveryManager, didDiscoverDevice device: BLEDevice) {
+        nuimoDiscoveryManager.delegate?.nuimoDiscoveryManager(nuimoDiscoveryManager, didDiscoverNuimoController: device as! NuimoController)
     }
 
-    public func bleDiscoveryManager(discovery: BLEDiscoveryManager, didRestoreDevice device: BLEDevice) {
-        delegate?.nuimoDiscoveryManager?(self, didRestoreNuimoController: device as! NuimoController)
-    }
-
-    public func bleDiscoveryManager(discovery: BLEDiscoveryManager, didConnectDevice device: BLEDevice) {
-        delegate?.nuimoDiscoveryManager?(self, didConnectNuimoController: device as! NuimoController)
-    }
-
-    public func bleDiscoveryManager(discovery: BLEDiscoveryManager, didFailToConnectDevice device: BLEDevice, error: NSError?) {
-        delegate?.nuimoDiscoveryManager?(self, didFailToConnectNuimoController: device as! NuimoController, error: error)
-    }
-
-    public func bleDiscoveryManager(discovery: BLEDiscoveryManager, didDisconnectDevice device: BLEDevice, error: NSError?) {
-        delegate?.nuimoDiscoveryManager?(self, didDisconnectNuimoController: device as! NuimoController, error: error)
-    }
-
-    public func bleDiscoveryManager(discovery: BLEDiscoveryManager, didInvalidateDevice device: BLEDevice) {
-        delegate?.nuimoDiscoveryManager?(self, didInvalidateController: device as! NuimoController)
+    func bleDiscoveryManager(discovery: BLEDiscoveryManager, didRestoreDevice device: BLEDevice) {
+        nuimoDiscoveryManager.delegate?.nuimoDiscoveryManager?(nuimoDiscoveryManager, didRestoreNuimoController: device as! NuimoController)
     }
 }
 
 @objc public protocol NuimoDiscoveryDelegate {
+    optional func nuimoDiscoveryManager(discovery: NuimoDiscoveryManager, deviceForPeripheral peripheral: CBPeripheral) -> BLEDevice?
     func nuimoDiscoveryManager(discovery: NuimoDiscoveryManager, didDiscoverNuimoController controller: NuimoController)
     optional func nuimoDiscoveryManager(discovery: NuimoDiscoveryManager, didRestoreNuimoController controller: NuimoController)
-    optional func nuimoDiscoveryManager(discovery: NuimoDiscoveryManager, didConnectNuimoController controller: NuimoController)
-    optional func nuimoDiscoveryManager(discovery: NuimoDiscoveryManager, didFailToConnectNuimoController controller: NuimoController, error: NSError?)
-    optional func nuimoDiscoveryManager(discovery: NuimoDiscoveryManager, didDisconnectNuimoController controller: NuimoController, error: NSError?)
-    optional func nuimoDiscoveryManager(discovery: NuimoDiscoveryManager, didInvalidateController controller: NuimoController)
 }

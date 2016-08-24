@@ -75,6 +75,11 @@ class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscover
         log("Server started")
     }
 
+    func server(server: PSWebSocketServer!, didFailWithError error: NSError!) {
+        log("Server failed: \(error.localizedDescription), \(error.localizedFailureReason ?? "")")
+        sockets = []
+    }
+
     func serverDidStop(server: PSWebSocketServer!) {
         log("Server stopped")
         sockets = []
@@ -100,7 +105,7 @@ class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscover
     }
 
     func server(server: PSWebSocketServer!, webSocket: PSWebSocket!, didFailWithError error: NSError!) {
-        log("WebSocket failed")
+        log("WebSocket failed: \(error.localizedDescription), \(error.localizedFailureReason ?? "")")
     }
 
     //MARK: NuimoDiscoveryDelegate
@@ -132,8 +137,7 @@ class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscover
         guard let event: String? = { switch (event.gesture) {
             case .ButtonPress:   return "B,1"
             case .ButtonRelease: return "B,0"
-            case .RotateLeft:    fallthrough
-            case .RotateRight:   return "R,\(event.value ?? 0)"
+            case .Rotate:        return "R,\(event.value ?? 0)"
             case .SwipeLeft:     return "S,L"
             case .SwipeRight:    return "S,R"
             case .SwipeUp:       return "S,U"

@@ -11,7 +11,7 @@
 		46199A771C760A7100EC7493 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46199A761C760A7100EC7493 /* ViewController.swift */; };
 		46199A791C760A7100EC7493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46199A781C760A7100EC7493 /* Assets.xcassets */; };
 		46199A7C1C760A7100EC7493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46199A7A1C760A7100EC7493 /* Main.storyboard */; };
-		87C71F23A0EA7576F2EF235F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F932D54BE7BF278DDC9AD89 /* Pods.framework */; };
+		FC61D461AC02B1D5B5B634F6 /* Pods_NuimoWebSocketServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F618D7931C4487329F64F8 /* Pods_NuimoWebSocketServer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,9 @@
 		46199A781C760A7100EC7493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46199A7B1C760A7100EC7493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46199A7D1C760A7100EC7493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B340F0BB8C7AF1800F2B9CE3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		C1634BE12E5DC21925493461 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B7A2626C369F740926C3D11D /* Pods-NuimoWebSocketServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NuimoWebSocketServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NuimoWebSocketServer/Pods-NuimoWebSocketServer.debug.xcconfig"; sourceTree = "<group>"; };
+		F1F618D7931C4487329F64F8 /* Pods_NuimoWebSocketServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NuimoWebSocketServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24673B632F6DE1830BAA1AB /* Pods-NuimoWebSocketServer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NuimoWebSocketServer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NuimoWebSocketServer/Pods-NuimoWebSocketServer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87C71F23A0EA7576F2EF235F /* Pods.framework in Frameworks */,
+				FC61D461AC02B1D5B5B634F6 /* Pods_NuimoWebSocketServer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,8 +44,8 @@
 			children = (
 				46199A731C760A7100EC7493 /* NuimoWebSocketServer */,
 				46199A721C760A7100EC7493 /* Products */,
-				7CD1AA43747D9ED85AB889F4 /* Pods */,
 				EB42D7E89EB4A670C839076B /* Frameworks */,
+				55807A133DB77AC01CBAA05D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,11 +69,11 @@
 			path = NuimoWebSocketServer;
 			sourceTree = "<group>";
 		};
-		7CD1AA43747D9ED85AB889F4 /* Pods */ = {
+		55807A133DB77AC01CBAA05D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C1634BE12E5DC21925493461 /* Pods.debug.xcconfig */,
-				B340F0BB8C7AF1800F2B9CE3 /* Pods.release.xcconfig */,
+				B7A2626C369F740926C3D11D /* Pods-NuimoWebSocketServer.debug.xcconfig */,
+				F24673B632F6DE1830BAA1AB /* Pods-NuimoWebSocketServer.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -81,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				0F932D54BE7BF278DDC9AD89 /* Pods.framework */,
+				F1F618D7931C4487329F64F8 /* Pods_NuimoWebSocketServer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -92,12 +94,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46199A801C760A7100EC7493 /* Build configuration list for PBXNativeTarget "NuimoWebSocketServer" */;
 			buildPhases = (
-				E87DD7AD558C1A570EA90E57 /* Check Pods Manifest.lock */,
+				F747B71E14F85415E49EB5C7 /* [CP] Check Pods Manifest.lock */,
 				46199A6D1C760A7100EC7493 /* Sources */,
 				46199A6E1C760A7100EC7493 /* Frameworks */,
 				46199A6F1C760A7100EC7493 /* Resources */,
-				7E78534E3325A5388E4DA12E /* Embed Pods Frameworks */,
-				445D97303BD31DBBB01B6A8F /* Copy Pods Resources */,
+				EFBE049BA087913D9CC297C8 /* [CP] Embed Pods Frameworks */,
+				2C07ADD2B1FE4A40CEE661BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,44 +156,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		445D97303BD31DBBB01B6A8F /* Copy Pods Resources */ = {
+		2C07ADD2B1FE4A40CEE661BD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NuimoWebSocketServer/Pods-NuimoWebSocketServer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E78534E3325A5388E4DA12E /* Embed Pods Frameworks */ = {
+		EFBE049BA087913D9CC297C8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NuimoWebSocketServer/Pods-NuimoWebSocketServer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E87DD7AD558C1A570EA90E57 /* Check Pods Manifest.lock */ = {
+		F747B71E14F85415E49EB5C7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +309,7 @@
 		};
 		46199A811C760A7100EC7493 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1634BE12E5DC21925493461 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = B7A2626C369F740926C3D11D /* Pods-NuimoWebSocketServer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -320,7 +322,7 @@
 		};
 		46199A821C760A7100EC7493 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B340F0BB8C7AF1800F2B9CE3 /* Pods.release.xcconfig */;
+			baseConfigurationReference = F24673B632F6DE1830BAA1AB /* Pods-NuimoWebSocketServer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;

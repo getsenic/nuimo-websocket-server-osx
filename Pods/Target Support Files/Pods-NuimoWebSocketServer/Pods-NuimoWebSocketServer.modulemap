@@ -1,0 +1,6 @@
+framework module Pods_NuimoWebSocketServer {
+  umbrella header "Pods-NuimoWebSocketServer-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,15 +1,23 @@
 PODS:
-  - NuimoSwift (0.3.2):
-    - NuimoSwift/Core (= 0.3.2)
-  - NuimoSwift/Core (0.3.2)
-  - PocketSocket (0.6.4)
+  - NuimoSwift (0.7.0)
+  - PocketSocket (1.0.1):
+    - PocketSocket/Client (= 1.0.1)
+    - PocketSocket/Core (= 1.0.1)
+    - PocketSocket/Server (= 1.0.1)
+  - PocketSocket/Client (1.0.1):
+    - PocketSocket/Core
+  - PocketSocket/Core (1.0.1)
+  - PocketSocket/Server (1.0.1):
+    - PocketSocket/Client
 
 DEPENDENCIES:
   - NuimoSwift
   - PocketSocket
 
 SPEC CHECKSUMS:
-  NuimoSwift: ab658ec14b2474f7c041a9d28951a36dcdf51303
-  PocketSocket: eee7ef375f55b98e7ca79e097d9c61fd688e9494
+  NuimoSwift: 1c5726aad55cc79f6a835469341071c5577d543a
+  PocketSocket: 9c6867d66fb4f962af96b9b07f4b45bb561b2c2a
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 60fb70c5aed00e5b4bdd4056ce44e20705c3e01c
+
+COCOAPODS: 1.0.1
