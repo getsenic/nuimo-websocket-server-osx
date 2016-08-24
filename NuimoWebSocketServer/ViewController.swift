@@ -101,7 +101,7 @@ class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscover
 
     func server(server: PSWebSocketServer!, webSocket: PSWebSocket!, didCloseWithCode code: Int, reason: String!, wasClean: Bool) {
         log("WebSocket closed")
-        sockets = sockets.filter{ $0 == webSocket }
+        sockets = sockets.filter{ $0 != webSocket }
     }
 
     func server(server: PSWebSocketServer!, webSocket: PSWebSocket!, didFailWithError error: NSError!) {
@@ -116,21 +116,25 @@ class ViewController: NSViewController, PSWebSocketServerDelegate, NuimoDiscover
 
     //MARK: NuimoControllerDelegate
 
-    func nuimoControllerDidConnect(controller: NuimoController) {
-        startServer()
-        nuimoStatusTextField.stringValue = "Connected"
-    }
-
-    func nuimoController(controller: NuimoController, didFailToConnect error: NSError?) {
-        discoverNuimo("Failed to connect.")
-    }
-
-    func nuimoController(controller: NuimoController, didDisconnect error: NSError?) {
-        discoverNuimo("Disconnected.")
-    }
-
-    func nuimoControllerDidInvalidate(controller: NuimoController) {
-        discoverNuimo("Disappeared.")
+    func nuimoController(controller: NuimoController, didChangeConnectionState state: NuimoConnectionState, withError error: NSError?) {
+        switch state {
+        case .Connecting:
+            discoverNuimo("Connecting...")
+        case .Connected:
+            startServer()
+            nuimoStatusTextField.stringValue = "Connected"
+        case .Disconnecting:
+            discoverNuimo("Disconnecting...")
+        case .Disconnected:
+            if let error = error {
+                discoverNuimo("Connection failed: \(error.localizedDescription) \(error.localizedFailureReason ?? "")")
+            }
+            else {
+                discoverNuimo("Disconnected")
+            }
+        case .Invalidated:
+            discoverNuimo("Disappeared.")
+        }
     }
 
     func nuimoController(controller: NuimoController, didReceiveGestureEvent event: NuimoGestureEvent) {
