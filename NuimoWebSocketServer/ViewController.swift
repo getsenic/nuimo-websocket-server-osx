@@ -132,6 +132,7 @@ extension ViewController: NuimoControllerDelegate {
         case .Invalidated:
             showNuimoStatus("Discovering...")
             stopServer()
+            arrayController.removeObject(controller)
         }
         if let error = error {
             log("Nuimo connection failed: \(error.localizedDescription) \(error.localizedFailureReason ?? "")")
