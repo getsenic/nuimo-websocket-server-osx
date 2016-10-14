@@ -78,12 +78,12 @@ class ViewController: NSViewController {
 
     func sendFirmwareVersion(sockets: [PSWebSocket]) {
         guard let firmwareVersion = firmwareVersion else { return }
-        sockets.forEach{ $0.send("V\(firmwareVersion)") }
+        sockets.forEach{ $0.send("V,\(firmwareVersion)") }
     }
 
     func sendBatteryLevel(sockets: [PSWebSocket]) {
         guard let batteryLevel = batteryLevel else { return }
-        sockets.forEach{ $0.send("%\(batteryLevel)") }
+        sockets.forEach{ $0.send("%,\(batteryLevel)") }
     }
 }
 
@@ -148,8 +148,7 @@ extension ViewController: NuimoControllerDelegate {
         case .Disconnecting:
             showNuimoStatus("Disconnecting...")
         case .Disconnected:
-            showNuimoStatus("Discovering...")
-            stopServer()
+            fallthrough
         case .Invalidated:
             showNuimoStatus("Discovering...")
             stopServer()
